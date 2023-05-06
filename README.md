@@ -16,5 +16,6 @@ There were planned
 - separate view, db, indentity modules
 - "anti spam" middleware
 
-but due to lack of time it was not imlemented
+but due to lack of time it was not imlemented.
+
 Thanks for attention.
