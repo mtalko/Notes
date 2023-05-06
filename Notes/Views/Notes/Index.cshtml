@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Notes Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Notes</h1>
+    <p>
+        @foreach (var note in Model)
+        {
+            <div>
+                @note.Title 
+                
+            </div>
+            <div>@note.Content</div>
+            <br/>
+            <a href="@Url.Action("DeleteNote", "Notes", new { noteId = @note.Id } )">
+                Remove
+            </a>
+            <br/><br/>
+        }
+    </p>
+    <form method="Post" action="@Url.Action("CreateNote", "Notes")">
+        <label for="title">Title</label><input name="title" /><br />
+        <label for="content">Content</label><input name="content" /><br />
+        <input type="hidden" name="id" />
+        <button type="Submit">Create</button>
+    </form>
+</div>
